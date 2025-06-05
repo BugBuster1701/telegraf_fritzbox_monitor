@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0.1 (FORK)
+- enable_phone_call_tracking: False
+- Database name: influxdb-telegraf
+- Phone Call Tracking Panels removed in Grafana for InfluxDB v1 datasource
+- Cache Use Patch from https://github.com/Ragin-LundF/telegraf_fritzbox_monitor/commit/6dd68aaa53c951f0a84732d7ee1adac6309631bc
+
+
+
 ## 1.3.0
 Support for InfluxDB 2.x
 

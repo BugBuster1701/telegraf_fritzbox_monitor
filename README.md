@@ -54,6 +54,7 @@ You need to install pip (Ubuntu example):
 ```bash
 sudo apt install python3-pip
 sudo pip3 install -r requirements.txt
+# sudo pip3 install -r requirements.txt --break-system-packages
 sudo ./install.sh
 ```
 
@@ -104,6 +105,7 @@ If you want to change options, you have to do it at `/etc/telegraf/telegraf.d/te
 Depending on the datasource (InfluxDB or Flux) you have to import one of those Dashboards:
 
 - [GrafanaFritzBoxDashboard.json](GrafanaFritzBoxDashboard.json) - InfluxDB v1 datasource
+- [GrafanaFritzBoxDashboard_reduced.json](GrafanaFritzBoxDashboard_reduced.json) - InfluxDB v1 datasource, Phone Call Tracking Panels removed
 - [GrafanaFritzBoxDashboard_Influx2.json](GrafanaFritzBoxDashboard_Influx2.json) - InfluxDB v2 (Flux)
 
 The Dashboard for InfluxDB 2 uses `tigstack` as default bucket name.
