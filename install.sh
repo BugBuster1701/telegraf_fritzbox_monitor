@@ -19,3 +19,5 @@ cp -fR models ${DEST_DIR}/
 cp -fR modules ${DEST_DIR}/
 
 chown -R telegraf:telegraf ${DEST_DIR}
+
+echo "Please check the rights of the /opt directory. User telegraf must be able to write in it."
