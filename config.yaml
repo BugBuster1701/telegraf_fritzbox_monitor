@@ -5,7 +5,7 @@ features:
   # Possible values:
   # True - Activates phone call tracking
   # False - Deactivates phone call tracking
-  enable_phone_call_tracking: True
+  enable_phone_call_tracking: False
 
 defaults:
   # Default value for the database name (InfluxDB)
