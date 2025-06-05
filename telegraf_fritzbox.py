@@ -34,6 +34,8 @@ class Application:
             self.__config.get().set_connection_username(args.username)
         if args.password:
             self.__config.get().set_connection_password(args.password)
+        if args.use_cache:
+            self.__config.get().set_connection_use_cache(args.use_cache)
 
         try:
             fritz_connect = FritzboxConnect(config=self.__config.get())
@@ -74,6 +76,8 @@ class Application:
               'Fritz!Box username (Default: admin)')
         print('-p | --password [FRITZ_PASSWORD]    : '
               'Fritz!Box password for the monitoring user.')
+        print('-x | --use-cache [FRITZ_USECACHE]   : '
+              'use cache (Default: False)')
         print('-e | --encrypt [ENCRYPT]            : '
               'Use a secure connection to your Fritz!Box. Can be True or False (Default: False)')
         print(f'-d | --database [FRITZBOX_DATABASE]: '

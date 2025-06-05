@@ -10,6 +10,7 @@ class ConfigurationModel:
         self.connection_username: str = ""
         self.connection_password: str = ""
         self.connection_port: str = ""
+        self.connection_use_cache: bool = False
         self.defaults_database: str = "FritzBox"
         self.defaults_phone_days: int = 1
         self.defaults_phone_days_kept: int = 5
@@ -26,6 +27,9 @@ class ConfigurationModel:
 
     def set_connection_port(self, port: str) -> None:
         self.connection_port = port
+
+    def set_connection_use_cache(self, use_cache: bool) -> None:
+        self.connection_use_cache = use_cache
 
     def set_defaults_database(self, database: str) -> None:
         self.defaults_database = database

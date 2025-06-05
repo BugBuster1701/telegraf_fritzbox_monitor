@@ -23,3 +23,5 @@ connection:
   fritzbox_password:
   # The port of the Fritz!Box.
   fritzbox_port:
+  # Use api cache, default False
+  use_cache: False
