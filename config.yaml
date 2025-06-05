@@ -25,3 +25,5 @@ connection:
   fritzbox_port:
   # Use api cache, default False
   use_cache: False
+  # Path to cache directory (default: ~.fritzconnection)
+  cache_directory: '~.fritzconnection'

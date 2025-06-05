@@ -14,6 +14,7 @@ class Configuration:
         self.__config.set_connection_password(self.__connection_fritz_password())
         self.__config.set_connection_port(self.__connection_fritz_port())
         self.__config.set_connection_use_cache(self.__connection_use_cache())
+        self.__config.set_connection_cache_directory(self.__connection_cache_directory())
         self.__config.set_defaults_database(self.__default_database())
         self.__config.set_defaults_phone_days(self.__defaults_phone_days())
         self.__config.set_defaults_phone_days_kept(self.__defaults_phone_days_kept())
@@ -38,6 +39,9 @@ class Configuration:
 
     def __connection_use_cache(self):
         return self.__config_yaml.get('connection')['use_cache']
+
+    def __connection_cache_directory(self):
+        return self.__config_yaml.get('connection')['cache_directory']
 
     def __default_database(self):
         return self.__config_yaml["defaults"]["influx_database"]

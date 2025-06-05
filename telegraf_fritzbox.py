@@ -78,6 +78,8 @@ class Application:
               'Fritz!Box password for the monitoring user.')
         print('-x | --use-cache [FRITZ_USECACHE]   : '
               'use cache (Default: False)')
+        print('--cache-directory [CACHE_DIRECTORY] : '
+              'cache directory (default: ~.fritzconnection)')
         print('-e | --encrypt [ENCRYPT]            : '
               'Use a secure connection to your Fritz!Box. Can be True or False (Default: False)')
         print(f'-d | --database [FRITZBOX_DATABASE]: '

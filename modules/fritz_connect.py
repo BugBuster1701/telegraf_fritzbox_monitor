@@ -14,12 +14,13 @@ class FritzboxConnect:
         password: str = config.connection_password
         port: str = config.connection_port
         use_cache: bool = config.connection_use_cache
+        cache_directory: str = config.connection_cache_directory
 
         if config.features_enable_phone_call_tracking:
-            self.__FCALL = FritzCall(address=address, user=username, password=password, port=port, timeout=2.0, use_cache=use_cache)
-        self.__FCONN = FritzConnection(address=address, user=username, password=password, port=port, timeout=2.0, use_cache=use_cache)
-        self.__FHOSTS = FritzHosts(address=address, user=username, password=password, port=port, timeout=2.0, use_cache=use_cache)
-        self.__FSTAT = FritzStatus(address=address, user=username, password=password, port=port, timeout=2.0, use_cache=use_cache)
+            self.__FCALL = FritzCall(address=address, user=username, password=password, port=port, timeout=2.0, use_cache=use_cache, cache_directory=cache_directory)
+        self.__FCONN = FritzConnection(address=address, user=username, password=password, port=port, timeout=2.0, use_cache=use_cache, cache_directory=cache_directory)
+        self.__FHOSTS = FritzHosts(address=address, user=username, password=password, port=port, timeout=2.0, use_cache=use_cache, cache_directory=cache_directory)
+        self.__FSTAT = FritzStatus(address=address, user=username, password=password, port=port, timeout=2.0, use_cache=use_cache, cache_directory=cache_directory)
         self.__DB = Database()
         self.__CONFIG = config
 
